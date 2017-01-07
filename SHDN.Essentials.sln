@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHDN.Essentials", "SHDN.Essentials\SHDN.Essentials.csproj", "{0A2314D9-5866-488A-9F9C-6E5F91E90BFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHDN.Essentials.Debug", "SHDN.Essentials.Debug\SHDN.Essentials.Debug.csproj", "{740BF38A-F178-4303-B79F-A451F804725F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A2314D9-5866-488A-9F9C-6E5F91E90BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A2314D9-5866-488A-9F9C-6E5F91E90BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A2314D9-5866-488A-9F9C-6E5F91E90BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740BF38A-F178-4303-B79F-A451F804725F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740BF38A-F178-4303-B79F-A451F804725F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740BF38A-F178-4303-B79F-A451F804725F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740BF38A-F178-4303-B79F-A451F804725F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

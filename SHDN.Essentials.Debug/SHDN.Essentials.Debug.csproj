@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A2314D9-5866-488A-9F9C-6E5F91E90BFC}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{740BF38A-F178-4303-B79F-A451F804725F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SHDN.Essentials</RootNamespace>
-    <AssemblyName>SHDN.Essentials</AssemblyName>
+    <RootNamespace>SHDN.Essentials.Debug</RootNamespace>
+    <AssemblyName>SHDN.Essentials.Debug</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,12 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ScriptHookVDotNet3">
-      <HintPath>D:\Programs\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet3.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,33 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Callbacks\CallbackManager.cs" />
-    <Compile Include="Callbacks\MemberCallback.cs" />
-    <Compile Include="Callbacks\MethodCallback.cs" />
-    <Compile Include="Callbacks\PropertyCallback.cs" />
-    <Compile Include="Collections\EntitySet.cs" />
-    <Compile Include="Collections\WList.cs" />
-    <Compile Include="Delegates.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="ExampleScript.cs" />
-    <Compile Include="Extensions\WrappedExtensions.cs" />
-    <Compile Include="Interfaces.cs" />
-    <Compile Include="Repositories\ItemRepository.cs" />
-    <Compile Include="Storage\Item.cs" />
-    <Compile Include="Storage\ItemStack.cs" />
-    <Compile Include="Storage\ItemUsable.cs" />
-    <Compile Include="Wrapped\WEntity.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wrapped\WObject.cs" />
-    <Compile Include="Wrapped\WPed.cs" />
-    <Compile Include="Wrapped\WPedGroup.cs" />
-    <Compile Include="Wrapped\WProp.cs" />
-    <Compile Include="Wrapped\WVehicle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SHDN.Essentials\SHDN.Essentials.csproj">
+      <Project>{0a2314d9-5866-488a-9f9c-6e5f91e90bfc}</Project>
+      <Name>SHDN.Essentials</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>COPY "$(TargetPath)" "D:\Programs\Steam\steamapps\common\Grand Theft Auto V\scripts"</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
